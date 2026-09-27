@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF8F5" />
+  <title>PawCare — Chăm sóc tốt hơn. Mua sắm thông minh hơn.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ============ SPLASH ============ -->
+    <section class="screen screen-splash" data-screen="splash">
+      <div class="splash-inner">
+        <div class="splash-logo">
+          <svg class="splash-paw" viewBox="0 0 64 64" aria-hidden="true">
+            <ellipse cx="22" cy="26" rx="7" ry="9" />
+            <ellipse cx="42" cy="26" rx="7" ry="9" />
+            <ellipse cx="12" cy="42" rx="6.5" ry="8" />
+            <ellipse cx="52" cy="42" rx="6.5" ry="8" />
+            <path d="M32 34 C26 34 22 41 22 48 C22 55 27 59 32 59 C37 59 42 55 42 48 C42 41 38 34 32 34 Z" />
+          </svg>
+        </div>
+        <img class="splash-dog" src="assets/images/intro-dog.png" alt="Chó cưng PawCare" />
+        <h1 class="splash-title">PawCare</h1>
+        <p class="splash-tagline">Chăm sóc tốt hơn, mua sắm thông minh hơn.</p>
+        <div class="splash-loader"><span class="splash-loader-bar"></span></div>
+      </div>
+    </section>
+
+    <!-- ============ HOME ============ -->
+    <section class="screen" data-screen="home">
+      <header class="topbar">
+        <div class="brand">
+          <svg class="brand-paw" viewBox="0 0 64 64" aria-hidden="true">
+            <ellipse cx="22" cy="26" rx="7" ry="9" />
+            <ellipse cx="42" cy="26" rx="7" ry="9" />
+            <ellipse cx="12" cy="42" rx="6.5" ry="8" />
+            <ellipse cx="52" cy="42" rx="6.5" ry="8" />
+            <path d="M32 34 C26 34 22 41 22 48 C22 55 27 59 32 59 C37 59 42 55 42 48 C42 41 38 34 32 34 Z" />
+          </svg>
+          <span class="brand-name">PawCare</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn" id="btn-notify" aria-label="Thông báo">
+            <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          </button>
+          <button class="icon-btn" id="btn-cart-home" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2 3h3l2.6 13.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"/></svg>
+            <span class="badge" id="cart-badge-top">0</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="search-wrap">
+        <button class="search-bar" id="search-open">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <span>Tìm kiếm sản phẩm thú cưng...</span>
+        </button>
+      </div>
+
+      <div class="pet-select">
+        <p class="section-label">Sắm đồ cho thú cưng của bạn</p>
+        <div class="pet-toggle">
+          <button class="pet-btn is-active" data-pet="dog">
+            <svg viewBox="0 0 400 400" class="pet-icon"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M146.766 173.395C144.929 192.224 133.931 288.423 148.656 300.692C154.959 305.941 185.732 303.093 193.787 303.093C206.246 303.093 238.122 308.395 244.222 293.359C254.728 267.463 248.202 206.351 248.202 177.848"/>
+<path d="M183.191 246.689C228.583 233.395 191.928 294.189 181.103 250.391"/>
+<path d="M177.466 296.744C184.605 263.848 202.209 262.296 210.199 295.692"/>
+<path d="M144.099 104.362C131.768 102.603 113.015 98.1036 112.071 109.956C111.23 120.516 118.065 183.07 122.391 183.07C126.264 183.07 150.098 134.192 150.795 129.431"/>
+<path d="M238.082 111.383C238.7 120.948 264.717 183.22 265.68 183.07C273.694 181.829 290.474 112.95 288.896 111.383C275.127 97.7261 256.886 105.41 241.587 105.41"/>
+<path d="M164.13 109.302C184.383 92.4473 210.49 91.9617 232.021 105.85"/>
+<path d="M177.046 164.93C177.497 159.717 177.524 154.297 177.885 149.209"/>
+<path d="M220.094 164.93C220.138 159.646 220.177 154.381 219.675 149.209"/></g></svg>
+            <span>Cậu vàng</span>
+          </button>
+          <button class="pet-btn" data-pet="cat">
+            <svg viewBox="0 0 512 512" class="pet-icon">
+<g fill="currentColor" stroke="none">
+	<polygon points="96.388,197.393 97.009,203.262 159.896,196.556 159.268,190.688 	"/>
+	<path d="M155.486,111.05c-8.683,0-15.734,7.052-15.734,15.727c0,8.69,7.052,15.734,15.734,15.734
+		s15.72-7.044,15.72-15.734C171.206,118.101,164.169,111.05,155.486,111.05z"/>
+	<polygon points="97.515,171.836 161.953,176.924 162.408,171.042 97.969,165.968 	"/>
+	<polygon points="272.209,42.238 258.943,59.935 281.057,64.352 	"/>
+	<polygon points="143.93,42.238 135.082,64.352 157.203,59.935 	"/>
+	<path d="M276.395,126.776c0-8.675-7.044-15.727-15.734-15.727c-8.682,0-15.728,7.052-15.728,15.727
+		c0,8.69,7.045,15.734,15.728,15.734C269.351,142.511,276.395,135.466,276.395,126.776z"/>
+	<polygon points="319.758,197.393 256.879,190.688 256.25,196.556 319.137,203.262 	"/>
+	<polygon points="318.163,165.968 253.745,171.042 254.207,176.924 318.625,171.836 	"/>
+	<path d="M242.4,203.637c-4.475,1.076-8.257,1.523-11.404,1.523c-4.171,0-7.196-0.78-9.455-1.913
+		c-3.349-1.71-5.298-4.273-6.64-7.578c-1.299-3.27-1.776-7.196-1.776-10.732c0-2.216,0.195-4.165,0.39-5.788l9.382-9.376
+		c1.732-1.718,2.245-4.323,1.314-6.582c-0.938-2.252-3.14-3.717-5.572-3.717h-21.132c-2.498,0-4.736,1.53-5.623,3.868
+		c-0.902,2.331-0.267,4.958,1.581,6.64l9.022,8.17c0.259,1.74,0.519,4.107,0.519,6.799c0.022,4.721-0.866,10.098-3.335,13.779
+		c-1.256,1.862-2.814,3.37-5.081,4.518c-2.252,1.133-5.269,1.913-9.44,1.913c-3.147,0-6.929-0.447-11.404-1.53
+		c-2.425-0.57-4.879,0.931-5.456,3.356c-0.57,2.425,0.931,4.879,3.363,5.464c5.024,1.191,9.484,1.754,13.497,1.761
+		c5.298,0,9.802-1.018,13.526-2.887c4.359-2.187,7.405-5.529,9.448-9.16l0.801,1.56c1.992,3.009,4.836,5.731,8.545,7.6
+		c3.724,1.869,8.236,2.887,13.526,2.887c4.006,0,8.474-0.57,13.505-1.768c2.432-0.592,3.926-3.032,3.341-5.457
+		C247.265,204.561,244.825,203.059,242.4,203.637z"/>
+	<path d="M435.895,246.307c0.657-0.678,1.624-1.306,2.31-1.646l0.404-0.188l21.436-7.145l-2.743-5.492
+		c7.716-9.448,10.978-22.324,7.651-34.861c-4.54-17.178-20.116-29.181-37.878-29.181c-3.385,0-6.756,0.44-10.047,1.299l-0.289,0.086
+		l-0.281,0.087c-11.043,3.211-21.776,9.116-31.159,17.091c-8.863,7.607-15.886,16.701-20.952,27.08
+		c-5.94,12.118-9.079,26.301-9.058,40.974c0.008,18.527,4.604,38.087,14.053,59.747c4.503,10.372,6.799,21.66,6.799,33.583
+		c0.043,16.037-4.338,32.572-11.924,45.629c-2.367-7.744-5.55-15.128-9.491-22.021c-18.513-32.414-41.891-82.374-53.33-107.354
+		c27.917-11.57,47.751-29.808,59.105-54.398c32.226-69.844-9.982-128.408-40.014-152.644C293.385,0.007,276.727,0.007,269.509,0
+		h-0.007c-1.314,0-2.627,0.109-3.919,0.325c-11.7,1.956-26.561,13.944-44.23,35.684H208.91h-12.457
+		c-17.668-21.739-32.522-33.728-44.23-35.684C150.939,0.109,149.625,0,148.304,0h-0.086c-7.261,0-23.898,0.231-50.891,56.954
+		C67.295,81.191,25.093,139.769,57.32,209.598c10.949,23.724,29.801,41.552,56.188,53.179
+		c-8.834,21.747-30.775,74.226-50.422,108.581c-19.018,33.28-19.538,78.52-1.256,110.01C73.119,500.841,90.527,512,109.582,512
+		h93.901h10.87h93.9c14.645,0,28.148-6.46,38.83-18.404c14.039-1.56,27.897-6.359,40.563-14.103
+		c20.202-12.372,37.236-31.7,49.289-55.915c11.526-23.305,17.611-49.512,17.625-75.82c0.008-22.764-4.482-44.605-13.338-64.93
+		c-6.214-14.255-7.514-23.328-7.506-28.43c0.007-4.272,0.816-5.961,1.162-6.684L435.895,246.307z M432.402,225.881l-0.419,0.13
+		c-0.491,0.188-1.371,0.52-2.461,1.075c-2.201,1.083-5.153,2.944-7.715,5.594c-1.711,1.768-3.291,3.876-4.598,6.546
+		c-1.718,3.573-3.082,8.206-3.103,15.157c-0.008,8.38,2.166,20.267,9.144,36.282c8.127,18.651,11.714,38.167,11.707,57.077
+		c-0.015,24.041-5.709,47.145-15.575,67.109c-9.917,19.92-23.999,36.918-41.964,47.925c-11.916,7.275-25.738,11.765-40.353,11.779
+		c-7.232,10.87-17.135,17.842-28.813,17.842c-27.21,0-73.084,0-93.9,0c0,0-4.128,0-10.87,0c-20.823,0-66.691,0-93.901,0
+		c-36.016,0-55.662-65.478-29.469-111.317c26.192-45.838,55.654-121.147,55.654-121.147l2.729-8.92
+		c-25.76-7.55-50.61-21.97-63.37-49.635c-35.951-77.885,37.928-131.792,37.928-131.792s23.075-49.982,35.25-49.982l0.7,0.065
+		c11.981,1.992,37.936,35.943,37.936,35.943h21.97h21.956c0,0,25.969-33.951,37.95-35.943l0.692-0.065
+		c12.184,0.007,35.244,49.982,35.244,49.982s73.893,53.908,37.943,131.792c-13.453,29.159-40.331,43.572-67.549,50.776l1.408,4.504
+		c0,0,34.969,78.585,61.154,124.423c8.286,14.493,11.974,30.935,12.024,46.662l-0.916,5.406c2.722-0.975,5.442-2.187,8.207-3.862
+		c6.726-4.085,13.41-10.386,19.234-18.491c11.707-16.182,19.552-39.394,19.488-63.053c0-13.988-2.642-28.12-8.438-41.407
+		c-8.596-19.726-12.399-36.86-12.407-51.952c-0.022-12.429,2.685-23.407,7.066-32.357c4.374-8.957,10.278-15.792,16.03-20.729
+		c11.613-9.873,22.331-12.731,24.049-13.237c1.682-0.447,3.364-0.664,5.031-0.664c8.675,0,16.614,5.802,18.932,14.601
+		c2.743,10.343-3.349,20.931-13.62,23.854L432.402,225.881z"/>
+</g></svg>
+            <span>Hoàng Thượng</span>
+          </button>
+        </div>
+      </div>
+
+      <button class="loc-entry" data-nav="location">
+        <span class="loc-entry-icon"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M309.2 584.776h105.5l-49 153.2H225.8c-7.3 0-13.3-6-13.3-13.3 0-2.6 0.8-5.1 2.2-7.3l83.4-126.7c2.5-3.6 6.7-5.9 11.1-5.9z" fill="#FFFFFF" /><path d="M404.5 791.276H225.8c-36.7 0-66.5-29.8-66.5-66.5 0-13 3.8-25.7 11-36.6l83.4-126.7c12.3-18.7 33.1-29.9 55.5-29.9h178.4l-83.1 259.7z m-95.3-206.5c-4.5 0-8.6 2.2-11.1 6l-83.4 126.7c-1.4 2.2-2.2 4.7-2.2 7.3 0 7.3 6 13.3 13.3 13.3h139.9l49-153.2H309.2z" fill="#333333" /><path d="M454.6 584.776h109.6l25.3 153.3H429.3z" fill="#FFFFFF" /><path d="M652.2 791.276H366.6l42.8-259.6h200l42.8 259.6z m-222.9-53.2h160.2l-25.3-153.3H454.6l-25.3 153.3z" fill="#333333" /><path d="M618.6 584.776h105.5c4.5 0 8.6 2.2 11.1 6l83.5 126.7c4 6.1 2.3 14.4-3.8 18.4-2.2 1.4-4.7 2.2-7.3 2.2H667.7l-49.1-153.3z" fill="#FFFFFF" /><path d="M807.6 791.276H628.9l-83.1-259.7h178.4c22.4 0 43.2 11.2 55.5 29.9l83.4 126.7c9.8 14.8 13.2 32.6 9.6 50s-13.7 32.3-28.6 42.1c-10.8 7.2-23.5 11-36.5 11z m-139.9-53.2h139.9c2.6 0 5.1-0.8 7.3-2.2 4-2.6 5.3-6.4 5.7-8.4 0.4-2 0.7-6-1.9-10l-83.4-126.6c-2.5-3.8-6.6-6-11.1-6H618.6l49.1 153.2z" fill="#333333" /><path d="M534.1 639.7C652.5 537.4 711.7 445.8 711.7 365c0-127-102.7-212.1-195-212.1s-195 85.1-195 212.1c0 80.8 59.2 172.3 177.7 274.7 9.9 8.6 24.7 8.6 34.7 0z" fill="#8CAAFF" /><path d="M516.7 672.7c-12.5 0-24.9-4.3-34.8-12.9C356.2 551.2 295.1 454.7 295.1 365c0-142.8 114.6-238.7 221.6-238.7S738.3 222.2 738.3 365c0 89.7-61.1 186.2-186.9 294.8-9.8 8.6-22.3 12.9-34.7 12.9z m0-493.2c-79.7 0-168.4 76.2-168.4 185.5 0 72.3 56.7 158 168.4 254.6C628.5 523 685.1 437.3 685.1 365c0-109.3-88.7-185.5-168.4-185.5z" fill="#333333" /><path d="M516.7 348m-97.5 0a97.5 97.5 0 1 0 195 0 97.5 97.5 0 1 0-195 0Z" fill="#FFFFFF" /><path d="M516.7 472.1c-68.4 0-124.1-55.7-124.1-124.1s55.7-124.1 124.1-124.1S640.8 279.5 640.8 348 585.1 472.1 516.7 472.1z m0-195.1c-39.1 0-70.9 31.8-70.9 70.9 0 39.1 31.8 70.9 70.9 70.9s70.9-31.8 70.9-70.9c0-39.1-31.8-70.9-70.9-70.9z" fill="#333333" /></svg></span>
+        <span class="loc-entry-text">
+          <strong>Cửa hàng gần nhà</strong>
+          <small>Tìm cửa hàng gần vị trí của bạn</small>
+        </span>
+        <svg class="loc-entry-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <button class="service-entry" data-nav="services">
+        <span class="service-entry-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.2"/></svg>
+        </span>
+        <span class="service-entry-label">
+          <small>DỊCH VỤ PAWCARE</small>
+          <strong>Đặt lịch chăm sóc thú cưng</strong>
+          <span>Grooming · Khám bệnh · Lưu trú</span>
+        </span>
+        <svg class="service-entry-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="category-strip" id="home-categories"></div>
+
+      <div class="promo-banner" id="promo-banner">
+        <div class="promo-text">
+          <strong>GIẢM 10%</strong>
+          <span>Cho đơn hàng đầu tiên</span>
+        </div>
+        <button class="btn btn-light" data-nav="promotions">Mua ngay</button>
+      </div>
+
+      <div class="home-section" id="home-recommended">
+        <div class="section-head"><h2 class="section-title">Gợi ý cho bạn</h2></div>
+        <div class="home-grid" data-row="recommended"></div>
+      </div>
+
+      <div class="home-section" id="home-bestsellers">
+        <div class="section-head"><h2 class="section-title">Bán chạy nhất</h2></div>
+        <div class="home-grid" data-row="bestsellers"></div>
+      </div>
+
+      <div class="home-section" id="home-frequent">
+        <div class="section-head"><h2 class="section-title">Thường được mua</h2></div>
+        <div class="home-grid" data-row="frequent"></div>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="screen" data-screen="categories">
+      <header class="topbar topbar-title">
+        <h1 class="screen-title">Danh mục</h1>
+      </header>
+      <div class="search-wrap">
+        <button class="search-bar" id="search-open-cat">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <span>Tìm kiếm sản phẩm thú cưng...</span>
+        </button>
+      </div>
+      <div class="category-grid" id="category-grid"></div>
+    </section>
+
+    <!-- ============ CART ============ -->
+    <section class="screen" data-screen="cart">
+      <header class="topbar topbar-title">
+        <h1 class="screen-title">Giỏ hàng của tôi</h1>
+      </header>
+      <div class="cart-body">
+        <div id="cart-items" class="cart-items"></div>
+        <div id="cart-empty" class="empty-state is-hidden">
+          <span class="empty-ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2 3h3l2.6 13.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"/></svg></span>
+          <p>Giỏ hàng của bạn đang trống</p>
+          <button class="btn btn-primary" data-nav="home">Bắt đầu mua sắm</button>
+        </div>
+
+        <div id="cart-summary" class="cart-summary is-hidden">
+          <div class="voucher-row">
+            <input type="text" id="voucher-input" placeholder="Mã giảm giá" autocomplete="off" />
+            <button class="btn btn-outline" id="voucher-apply">Áp dụng</button>
+          </div>
+          <div class="summary-line"><span>Tạm tính</span><span id="sum-subtotal">0₫</span></div>
+          <div class="summary-line"><span>Giảm giá</span><span id="sum-discount" class="text-accent">0₫</span></div>
+          <div class="summary-line"><span>Phí vận chuyển</span><span id="sum-shipping">0₫</span></div>
+          <div class="summary-line summary-total"><span>Tổng cộng</span><span id="sum-total">0₫</span></div>
+        </div>
+      </div>
+      <div class="sticky-checkout" id="cart-sticky">
+        <div class="sticky-total"><span>Tổng cộng</span><strong id="sticky-cart-total">0₫</strong></div>
+        <button class="btn btn-primary btn-grow" id="btn-checkout">Thanh toán</button>
+      </div>
+    </section>
+
+    <!-- ============ ORDERS ============ -->
+    <section class="screen" data-screen="orders">
+      <header class="topbar topbar-title">
+        <h1 class="screen-title">Đơn hàng của tôi</h1>
+      </header>
+      <div id="orders-list" class="orders-list"></div>
+    </section>
+
+    <!-- ============ PROFILE ============ -->
+    <section class="screen" data-screen="profile">
+      <header class="topbar topbar-title">
+        <h1 class="screen-title">Hồ sơ</h1>
+      </header>
+      <div class="profile-scroll">
+        <div class="profile-card">
+          <div class="avatar">MA</div>
+          <div class="profile-meta">
+            <strong>Minh Anh</strong>
+            <span>minhanh@example.com</span>
+            <span class="member-chip">Thành viên Vàng</span>
+          </div>
+        </div>
+
+        <div class="menu-group">
+          <div class="menu-group-label">Tài khoản</div>
+          <div class="profile-menu">
+            <button class="menu-item" data-nav="orders"><span class="mi-ico"><svg viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg></span> Đơn hàng của tôi <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="menu-item" data-nav="appointments"><span class="mi-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg></span> Lịch hẹn của tôi <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="menu-item" data-nav="wishlist"><span class="mi-ico"><svg viewBox="0 0 24 24"><path d="M8.96173 18.9109L9.42605 18.3219L8.96173 18.9109ZM12 5.50063L11.4596 6.02073C11.601 6.16763 11.7961 6.25063 12 6.25063C12.2039 6.25063 12.399 6.16763 12.5404 6.02073L12 5.50063ZM15.0383 18.9109L15.5026 19.4999L15.0383 18.9109ZM9.42605 18.3219C7.91039 17.1271 6.25307 15.9603 4.93829 14.4798C3.64922 13.0282 2.75 11.3345 2.75 9.1371H1.25C1.25 11.8026 2.3605 13.8361 3.81672 15.4758C5.24723 17.0866 7.07077 18.3752 8.49742 19.4999L9.42605 18.3219ZM2.75 9.1371C2.75 6.98623 3.96537 5.18252 5.62436 4.42419C7.23607 3.68748 9.40166 3.88258 11.4596 6.02073L12.5404 4.98053C10.0985 2.44352 7.26409 2.02539 5.00076 3.05996C2.78471 4.07292 1.25 6.42503 1.25 9.1371H2.75ZM8.49742 19.4999C9.00965 19.9037 9.55954 20.3343 10.1168 20.6599C10.6739 20.9854 11.3096 21.25 12 21.25V19.75C11.6904 19.75 11.3261 19.6293 10.8736 19.3648C10.4213 19.1005 9.95208 18.7366 9.42605 18.3219L8.49742 19.4999ZM15.5026 19.4999C16.9292 18.3752 18.7528 17.0866 20.1833 15.4758C21.6395 13.8361 22.75 11.8026 22.75 9.1371H21.25C21.25 11.3345 20.3508 13.0282 19.0617 14.4798C17.7469 15.9603 16.0896 17.1271 14.574 18.3219L15.5026 19.4999ZM22.75 9.1371C22.75 6.42503 21.2153 4.07292 18.9992 3.05996C16.7359 2.02539 13.9015 2.44352 11.4596 4.98053L12.5404 6.02073C14.5983 3.88258 16.7639 3.68748 18.3756 4.42419C20.0346 5.18252 21.25 6.98623 21.25 9.1371H22.75ZM14.574 18.3219C14.0479 18.7366 13.5787 19.1005 13.1264 19.3648C12.6739 19.6293 12.3096 19.75 12 19.75V21.25C12.6904 21.25 13.3261 20.9854 13.8832 20.6599C14.4405 20.3343 14.9903 19.9037 15.5026 19.4999L14.574 18.3219Z" fill="currentColor" stroke="none"/></svg></span> Yêu thích <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="menu-item" data-nav="promotions"><span class="mi-ico"><svg viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg></span> Mã giảm giá <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="menu-item" data-nav="promotions"><span class="mi-ico"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg></span> Hội viên <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+
+        <div class="menu-group">
+          <div class="menu-group-label">Khám phá &amp; Hỗ trợ</div>
+          <div class="profile-menu">
+            <button class="menu-item" data-nav="content"><span class="mi-ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span> Nội dung chăm sóc thú cưng <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="menu-item" data-nav="orders"><span class="mi-ico"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span> Nhắc mua lại <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="menu-item" data-nav="promotions"><span class="mi-ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 1 1 16.1-3.8z"/></svg></span> Hỗ trợ khách hàng <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="menu-item" id="btn-settings"><span class="mi-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></span> Cài đặt <svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WISHLIST ============ -->
+    <section class="screen" data-screen="wishlist">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <h1 class="screen-title">Yêu thích</h1>
+      </header>
+      <div id="wishlist-list" class="wishlist-list"></div>
+    </section>
+
+    <!-- ============ PROMOTIONS ============ -->
+    <section class="screen" data-screen="promotions">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <h1 class="screen-title">Khuyến mãi</h1>
+      </header>
+      <div class="scroll">
+        <div class="promo-hero">
+          <strong>Lễ hội PawCare</strong>
+          <span>Giảm đến 20% cho sản phẩm chọn lọc</span>
+        </div>
+        <h2 class="section-title">Mã giảm giá của bạn</h2>
+        <div id="voucher-list" class="voucher-list"></div>
+        <h2 class="section-title">Quyền lợi hội viên</h2>
+        <div class="member-benefits">
+          <div class="benefit"><span class="bi-ico"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg></span><div><strong>Bạc</strong><p>Hoàn 5%</p></div></div>
+          <div class="benefit is-active"><span class="bi-ico"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg></span><div><strong>Vàng</strong><p>Hoàn 10% + miễn phí vận chuyển</p></div></div>
+          <div class="benefit"><span class="bi-ico"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg></span><div><strong>Kim cương</strong><p>Hoàn 15% + quà tặng</p></div></div>
+        </div>
+        <h2 class="section-title">Chiến dịch</h2>
+        <div class="campaign-grid">
+          <div class="campaign-card"><span class="cc-ico"><svg viewBox="0 0 24 24"><path d="M12 6c-2.5 0-4.5 2-4.5 4.5 0 1 .3 1.9.8 2.7L7 20l3.5-2.4L14 20l-.8-6.8c.5-.8.8-1.7.8-2.7C14 8 12 6 12 6z"/><path d="M6.5 8 5 3l2.5 2M17.5 8 19 3l-2.5 2"/></svg></span><strong>Tuần lễ chó</strong><span>Thức ăn giảm 5%</span></div>
+          <div class="campaign-card"><span class="cc-ico"><svg viewBox="0 0 24 24"><path d="M12 5 9.5 2.5 8.5 6 6.5 4.5 7.5 8.5A6.5 6.5 0 0 0 5 15c0 3.3 3.1 6 7 6s7-2.7 7-6a6.5 6.5 0 0 0-2.5-6.5l1-4-2 2-1-3.5z"/></svg></span><strong>Tuần lễ mèo</strong><span>Đồ chơi giảm 5%</span></div>
+          <div class="campaign-card"><span class="cc-ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9"/><path d="M14.5 14.5 20 20"/><path d="M8.1 8.1 12 12"/></svg></span><strong>Làm đẹp</strong><span>Quà miễn phí</span></div>
+          <div class="campaign-card"><span class="cc-ico"><svg viewBox="0 0 24 24"><path d="M10.5 20.5 3.5 13.5a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7z"/><path d="M8.5 8.5l7 7"/></svg></span><strong>Sức khỏe</strong><span>Vitamin giảm 10%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTENT ============ -->
+    <section class="screen" data-screen="content">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <h1 class="screen-title">Chăm sóc thú cưng</h1>
+      </header>
+      <div id="article-list" class="article-list"></div>
+    </section>
+
+    <!-- ============ LISTING ============ -->
+    <section class="screen" data-screen="listing">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <h1 class="screen-title" id="listing-title">Sản phẩm</h1>
+        <button class="icon-btn" id="btn-sort" aria-label="Sắp xếp"><svg viewBox="0 0 24 24"><path d="M3 6h18M6 12h12M10 18h4"/></svg></button>
+        <button class="icon-btn" id="btn-filter" aria-label="Bộ lọc"><svg viewBox="0 0 24 24"><path d="M3 4.6C3 4.03995 3 3.75992 3.10899 3.54601C3.20487 3.35785 3.35785 3.20487 3.54601 3.10899C3.75992 3 4.03995 3 4.6 3H19.4C19.9601 3 20.2401 3 20.454 3.10899C20.6422 3.20487 20.7951 3.35785 20.891 3.54601C21 3.75992 21 4.03995 21 4.6V6.33726C21 6.58185 21 6.70414 20.9724 6.81923C20.9479 6.92127 20.9075 7.01881 20.8526 7.10828C20.7908 7.2092 20.7043 7.29568 20.5314 7.46863L14.4686 13.5314C14.2957 13.7043 14.2092 13.7908 14.1474 13.8917C14.0925 13.9812 14.0521 14.0787 14.0276 14.1808C14 14.2959 14 14.4182 14 14.6627V17L10 21V14.6627C10 14.4182 10 14.2959 9.97237 14.1808C9.94787 14.0787 9.90747 13.9812 9.85264 13.8917C9.7908 13.7908 9.70432 13.7043 9.53137 13.5314L3.46863 7.46863C3.29568 7.29568 3.2092 7.2092 3.14736 7.10828C3.09253 7.01881 3.05213 6.92127 3.02763 6.81923C3 6.70414 3 6.58185 3 6.33726V4.6Z" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </header>
+      <div class="listing-meta">
+        <span id="listing-count">0 sản phẩm</span>
+        <button class="chip" id="active-filters">Không bộ lọc</button>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <!-- ============ DETAIL ============ -->
+    <section class="screen" data-screen="detail">
+      <div class="detail-scroll" id="detail-scroll"></div>
+      <div class="detail-buy" id="detail-sticky"></div>
+    </section>
+
+    <!-- ============ CHECKOUT ============ -->
+    <section class="screen" data-screen="checkout">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <h1 class="screen-title">Thanh toán</h1>
+      </header>
+      <div class="checkout-scroll">
+        <div class="checkout-section">
+          <div class="cs-head"><h2>Địa chỉ giao hàng</h2><button class="link" id="btn-change-address">Đổi</button></div>
+          <div class="address-form">
+            <input type="text" id="addr-name" placeholder="Tên khách hàng" />
+            <input type="tel" id="addr-phone" placeholder="Số điện thoại" />
+            <input type="text" id="addr-address" placeholder="Địa chỉ" />
+          </div>
+        </div>
+        <div class="checkout-section">
+          <h2>Vận chuyển</h2>
+          <label class="option-row"><input type="radio" name="shipping" value="standard" checked /><div><strong>Giao hàng tiêu chuẩn</strong><span>3–5 ngày · 20.000₫</span></div></label>
+          <label class="option-row"><input type="radio" name="shipping" value="express" /><div><strong>Giao hàng nhanh</strong><span>1–2 ngày · 45.000₫</span></div></label>
+        </div>
+        <div class="checkout-section">
+          <h2>Thanh toán</h2>
+          <label class="option-row"><input type="radio" name="payment" value="cod" checked /><span class="opt-ico"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></span><div><strong>Thanh toán khi nhận hàng</strong><span>Trả tiền khi nhận hàng</span></div></label>
+          <label class="option-row"><input type="radio" name="payment" value="bank" /><span class="opt-ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span><div><strong>Chuyển khoản ngân hàng</strong><span>Qua QR / tài khoản</span></div></label>
+          <label class="option-row"><input type="radio" name="payment" value="ewallet" /><span class="opt-ico"><svg viewBox="0 0 24 24"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg></span><div><strong>Ví điện tử</strong><span>Momo / ZaloPay</span></div></label>
+        </div>
+        <div class="checkout-section">
+          <h2>Tóm tắt đơn hàng</h2>
+          <div id="checkout-products" class="checkout-products"></div>
+          <div class="summary-line"><span>Tạm tính</span><span id="co-subtotal">0₫</span></div>
+          <div class="summary-line"><span>Vận chuyển</span><span id="co-shipping">0₫</span></div>
+          <div class="summary-line"><span>Giảm giá</span><span id="co-discount" class="text-accent">0₫</span></div>
+          <div class="summary-line summary-total"><span>Tổng cộng</span><span id="co-total">0₫</span></div>
+        </div>
+      </div>
+      <div class="sticky-checkout">
+        <div class="sticky-total"><span>Tổng cộng</span><strong id="co-sticky-total">0₫</strong></div>
+        <button class="btn btn-primary btn-grow" id="btn-place-order">Đặt hàng</button>
+      </div>
+    </section>
+
+    <!-- ============ CONFIRMATION ============ -->
+    <section class="screen" data-screen="confirmation">
+      <div class="confirm-wrap">
+        <div class="confirm-icon"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h1>Đặt hàng thành công</h1>
+        <p class="confirm-order">Đơn hàng #<span id="confirm-order-no"></span></p>
+        <div class="confirm-box">
+          <div class="summary-line"><span>Tổng tiền</span><strong id="confirm-total"></strong></div>
+          <div class="summary-line"><span>Dự kiến giao hàng</span><span id="confirm-eta"></span></div>
+          <div class="summary-line"><span>Thanh toán</span><span id="confirm-payment"></span></div>
+        </div>
+        <button class="btn btn-primary btn-block" data-nav="orders">Theo dõi đơn hàng</button>
+        <button class="btn btn-outline btn-block" data-nav="home">Tiếp tục mua sắm</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="services">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <h1 class="screen-title">Dịch vụ PawCare</h1>
+        <span class="header-spacer"></span>
+      </header>
+      <div class="service-scroll">
+        <div class="service-intro">
+          <span class="service-intro-icon"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.2"/></svg></span>
+          <div><strong>Chăm sóc chuyên nghiệp</strong><p>Đặt lịch tại cửa hàng PawCare gần bạn nhất.</p></div>
+        </div>
+        <div id="service-list" class="service-list"></div>
+        <div class="service-trust-row">
+          <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Nhân viên được đào tạo</span>
+          <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Xác nhận tức thì</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="service-detail">
+      <div id="service-detail-scroll" class="service-detail-scroll"></div>
+      <div id="service-detail-sticky" class="service-detail-sticky"></div>
+    </section>
+
+    <section class="screen" data-screen="booking">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <h1 class="screen-title" id="booking-title">Đặt lịch dịch vụ</h1>
+        <span class="header-spacer"></span>
+      </header>
+      <div id="booking-content" class="booking-content"></div>
+      <div id="booking-sticky" class="sticky-checkout booking-sticky">
+        <div class="sticky-total"><span id="booking-sticky-label">Tổng cộng</span><strong id="booking-sticky-total">0₫</strong></div>
+        <button class="btn btn-primary btn-grow" data-booking-submit>Thanh toán &amp; đặt lịch</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="booking-confirmation">
+      <div class="confirm-wrap booking-confirm-wrap">
+        <div class="confirm-icon"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h1>Đặt lịch thành công</h1>
+        <p class="confirm-order">Lịch hẹn #<span id="booking-confirm-no"></span></p>
+        <div id="booking-confirm-details" class="confirm-box"></div>
+        <button class="btn btn-primary btn-block" data-nav="appointments">Xem lịch hẹn của tôi</button>
+        <button class="btn btn-outline btn-block" data-nav="home">Trở về trang chủ</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="appointments">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <h1 class="screen-title">Lịch hẹn của tôi</h1>
+        <span class="header-spacer"></span>
+      </header>
+      <div id="appointment-list" class="appointment-list"></div>
+    </section>
+
+    <!-- ============ LOCATION / STORE FINDER ============ -->
+    <section class="screen" data-screen="location">
+      <div class="loc-map">
+        <div class="loc-topbar">
+          <button class="loc-back" data-back aria-label="Quay lại">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <h1 class="loc-title">CỬA HÀNG PAWCARE</h1>
+        </div>
+
+        <button class="loc-selector">
+          <svg class="loc-ico" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M309.2 584.776h105.5l-49 153.2H225.8c-7.3 0-13.3-6-13.3-13.3 0-2.6 0.8-5.1 2.2-7.3l83.4-126.7c2.5-3.6 6.7-5.9 11.1-5.9z" fill="#FFFFFF" /><path d="M404.5 791.276H225.8c-36.7 0-66.5-29.8-66.5-66.5 0-13 3.8-25.7 11-36.6l83.4-126.7c12.3-18.7 33.1-29.9 55.5-29.9h178.4l-83.1 259.7z m-95.3-206.5c-4.5 0-8.6 2.2-11.1 6l-83.4 126.7c-1.4 2.2-2.2 4.7-2.2 7.3 0 7.3 6 13.3 13.3 13.3h139.9l49-153.2H309.2z" fill="#333333" /><path d="M454.6 584.776h109.6l25.3 153.3H429.3z" fill="#FFFFFF" /><path d="M652.2 791.276H366.6l42.8-259.6h200l42.8 259.6z m-222.9-53.2h160.2l-25.3-153.3H454.6l-25.3 153.3z" fill="#333333" /><path d="M618.6 584.776h105.5c4.5 0 8.6 2.2 11.1 6l83.5 126.7c4 6.1 2.3 14.4-3.8 18.4-2.2 1.4-4.7 2.2-7.3 2.2H667.7l-49.1-153.3z" fill="#FFFFFF" /><path d="M807.6 791.276H628.9l-83.1-259.7h178.4c22.4 0 43.2 11.2 55.5 29.9l83.4 126.7c9.8 14.8 13.2 32.6 9.6 50s-13.7 32.3-28.6 42.1c-10.8 7.2-23.5 11-36.5 11z m-139.9-53.2h139.9c2.6 0 5.1-0.8 7.3-2.2 4-2.6 5.3-6.4 5.7-8.4 0.4-2 0.7-6-1.9-10l-83.4-126.6c-2.5-3.8-6.6-6-11.1-6H618.6l49.1 153.2z" fill="#333333" /><path d="M534.1 639.7C652.5 537.4 711.7 445.8 711.7 365c0-127-102.7-212.1-195-212.1s-195 85.1-195 212.1c0 80.8 59.2 172.3 177.7 274.7 9.9 8.6 24.7 8.6 34.7 0z" fill="#8CAAFF" /><path d="M516.7 672.7c-12.5 0-24.9-4.3-34.8-12.9C356.2 551.2 295.1 454.7 295.1 365c0-142.8 114.6-238.7 221.6-238.7S738.3 222.2 738.3 365c0 89.7-61.1 186.2-186.9 294.8-9.8 8.6-22.3 12.9-34.7 12.9z m0-493.2c-79.7 0-168.4 76.2-168.4 185.5 0 72.3 56.7 158 168.4 254.6C628.5 523 685.1 437.3 685.1 365c0-109.3-88.7-185.5-168.4-185.5z" fill="#333333" /><path d="M516.7 348m-97.5 0a97.5 97.5 0 1 0 195 0 97.5 97.5 0 1 0-195 0Z" fill="#FFFFFF" /><path d="M516.7 472.1c-68.4 0-124.1-55.7-124.1-124.1s55.7-124.1 124.1-124.1S640.8 279.5 640.8 348 585.1 472.1 516.7 472.1z m0-195.1c-39.1 0-70.9 31.8-70.9 70.9 0 39.1 31.8 70.9 70.9 70.9s70.9-31.8 70.9-70.9c0-39.1-31.8-70.9-70.9-70.9z" fill="#333333" /></svg>
+          <span>Gần: Vị trí hiện tại của bạn</span>
+          <svg viewBox="0 0 24 24" class="loc-caret"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+
+        <button class="map-pin pin-1" data-pin="1" aria-label="PawCare - Chi nhánh Lerchenstraße">
+          <span class="pin-popup">PawCare - Chi nhánh Lerchenstraße</span>
+          <svg class="pin-shape" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          <span class="pin-num">1</span>
+        </button>
+
+        <button class="map-pin pin-2" data-pin="2" aria-label="PawCare - Chi nhánh Binswanger">
+          <span class="pin-popup">PawCare - Chi nhánh Binswanger</span>
+          <svg class="pin-shape" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          <span class="pin-num">2</span>
+        </button>
+
+        <button class="map-pin pin-3" data-pin="3" aria-label="PawCare - Chi nhánh Friedrichstraße">
+          <span class="pin-popup">PawCare - Chi nhánh Friedrichstraße</span>
+          <svg class="pin-shape" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          <span class="pin-num">3</span>
+        </button>
+
+        <button class="loc-gps" data-loc-gps aria-label="Định vị vị trí hiện tại">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="1.5"/></svg>
+        </button>
+      </div>
+
+      <div class="loc-sheet">
+        <div class="loc-handle"></div>
+        <div class="loc-sheet-head">
+          <h2>Cửa hàng PawCare</h2>
+          <button class="link">Xem tất cả</button>
+        </div>
+        <div class="loc-list">
+          <div class="loc-card" data-store="1">
+            <span class="loc-rank">1</span>
+            <div class="loc-card-main">
+              <div class="loc-card-top">
+                <h3 class="loc-name">PawCare - Chi nhánh Lerchenstraße (Cơ sở 1)</h3>
+                <button class="loc-dir" data-loc-direction aria-label="Chỉ đường"><svg viewBox="0 0 24 24"><path d="M4 12h13M12 7l5 5-5 5"/></svg></button>
+              </div>
+              <div class="loc-meta">
+                <span class="loc-stars">★★★★★ <b>5.0</b></span>
+                <span class="loc-open">Đã mở cửa</span>
+              </div>
+              <p class="loc-addr">Lerchenstraße 12, Neckarsulm · 350m</p>
+            </div>
+          </div>
+
+          <div class="loc-card" data-store="2">
+            <span class="loc-rank">2</span>
+            <div class="loc-card-main">
+              <div class="loc-card-top">
+                <h3 class="loc-name">PawCare - Chi nhánh Binswanger (Cơ sở 2)</h3>
+                <button class="loc-dir" data-loc-direction aria-label="Chỉ đường"><svg viewBox="0 0 24 24"><path d="M4 12h13M12 7l5 5-5 5"/></svg></button>
+              </div>
+              <div class="loc-meta">
+                <span class="loc-stars">★★★★☆ <b>4.8</b></span>
+                <span class="loc-open">Đã mở cửa</span>
+              </div>
+              <p class="loc-addr">Binswanger Str. 45, Neckarsulm · 1.2 km</p>
+            </div>
+          </div>
+
+          <div class="loc-card" data-store="3">
+            <span class="loc-rank">3</span>
+            <div class="loc-card-main">
+              <div class="loc-card-top">
+                <h3 class="loc-name">PawCare - Chi nhánh Friedrichstraße (Cơ sở 3)</h3>
+                <button class="loc-dir" data-loc-direction aria-label="Chỉ đường"><svg viewBox="0 0 24 24"><path d="M4 12h13M12 7l5 5-5 5"/></svg></button>
+              </div>
+              <div class="loc-meta">
+                <span class="loc-stars">★★★★★ <b>4.9</b></span>
+                <span class="loc-open is-closing">Sắp đóng cửa</span>
+              </div>
+              <p class="loc-addr">Friedrichstraße 88, Neckarsulm · 2.1 km</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOTTOM NAV ============ -->
+    <nav class="bottom-nav">
+      <div class="nav-bar">
+        <svg class="nav-curve" viewBox="0 0 375 70" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 28C0 12.549 12.549 0 28 0H125.5C136.2 0 145.8 5.7 150.8 14.8C158.2 28.3 172.5 37 187.5 37C202.5 37 216.8 28.3 224.2 14.8C229.2 5.7 238.8 0 249.5 0H347C362.451 0 375 12.549 375 28V42C375 57.451 362.451 70 347 70H28C12.549 70 0 57.451 0 42V28Z" fill="currentColor"/>
+        </svg>
+
+        <button class="nav-center" data-nav="cart" aria-label="Giỏ hàng">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2 3h3l2.6 13.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"/></svg>
+          <span class="badge" id="cart-badge-nav">0</span>
+        </button>
+
+        <div class="nav-items">
+          <div class="nav-side">
+            <button class="nav-item is-active" data-nav="home">
+              <svg viewBox="0 0 24 24"><path d="M22 22L2 22" stroke-linecap="round"/>
+<path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke-linecap="round"/>
+<path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke-linecap="round"/>
+<path d="M4 22V9.5" stroke-linecap="round"/>
+<path d="M20 9.5V13.5M20 22V17.5" stroke-linecap="round"/>
+<path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"/></svg>
+              <span>Trang chủ</span>
+              <i class="active-dot"></i>
+            </button>
+            <button class="nav-item" data-nav="categories">
+              <svg viewBox="0 0 24 24"><path d="M3.5 11V14C3.5 17.7712 3.5 19.6569 4.67157 20.8284C5.84315 22 7.72876 22 11.5 22H12.5C16.2712 22 18.1569 22 19.3284 20.8284M20.5 11V14C20.5 15.1698 20.5 16.1581 20.465 17" stroke-linecap="round"/>
+<path d="M9.50002 2H14.5M9.50002 2L8.84828 8.51737C8.66182 10.382 10.1261 12 12 12C13.874 12 15.3382 10.382 15.1518 8.51737L14.5 2M9.50002 2H7.41771C6.50969 2 6.05567 2 5.66628 2.10675C4.84579 2.33168 4.15938 2.89439 3.77791 3.65484M9.50002 2L8.77549 9.24527C8.61911 10.8091 7.30318 12 5.73155 12C3.8011 12 2.35324 10.2339 2.73183 8.34093L2.80002 8M14.5 2H16.5823C17.4904 2 17.9444 2 18.3338 2.10675C19.1542 2.33168 19.8407 2.89439 20.2221 3.65484C20.4032 4.01573 20.4922 4.46093 20.6703 5.35133L21.2682 8.34093C21.6468 10.2339 20.1989 12 18.2685 12C16.6969 12 15.3809 10.8091 15.2245 9.24527L14.5 2Z" stroke-linecap="round"/>
+<path d="M9.5 21.5V18.5C9.5 17.5654 9.5 17.0981 9.70096 16.75C9.83261 16.522 10.022 16.3326 10.25 16.201C10.5981 16 11.0654 16 12 16C12.9346 16 13.4019 16 13.75 16.201C13.978 16.3326 14.1674 16.522 14.299 16.75C14.5 17.0981 14.5 17.5654 14.5 18.5V21.5" stroke-linecap="round"/></svg>
+              <span>Danh mục</span>
+              <i class="active-dot"></i>
+            </button>
+          </div>
+
+          <div class="nav-side">
+            <button class="nav-item" data-nav="orders">
+              <svg viewBox="0 0 32 32">
+
+<g transform="translate(36,-148)" fill="currentColor" stroke="none" fill-rule="evenodd">
+
+<path d="m -28,150 c -2.749574,0 -5,2.25042 -5,5 v 22 a 1.0001,1.0001 0 0 0 1.832031,0.55469 L -30,175.80273 l 1.167969,1.75196 a 1.0001,1.0001 0 0 0 1.664062,0 L -26,175.80273 l 1.167969,1.75196 a 1.0001,1.0001 0 0 0 1.664062,0 L -22,175.80273 l 1.167969,1.75196 a 1.0001,1.0001 0 0 0 1.664062,0 L -18,175.80273 l 1.167969,1.75196 A 1.0001,1.0001 0 0 0 -15,177 v -12 h 7 a 1.0001,1.0001 0 0 0 1,-1 v -9 c 0,-2.74958 -2.2504259,-5 -5,-5 z m 0,2 h 12.007812 C -16.624083,152.83731 -17,153.87659 -17,155 v 1 8 9.69727 l -0.167969,-0.25196 a 1.0001,1.0001 0 0 0 -1.664062,0 L -20,175.19727 l -1.167969,-1.75196 a 1.0001,1.0001 0 0 0 -1.664062,0 L -24,175.19727 l -1.167969,-1.75196 a 1.0001,1.0001 0 0 0 -1.664062,0 L -28,175.19727 l -1.167969,-1.75196 a 1.0001,1.0001 0 0 0 -1.664062,0 L -31,173.69727 V 155 c 0,-1.6687 1.331303,-3 3,-3 z m 16,0 c 1.668697,0 3,1.3313 3,3 v 8 h -6 v -7 -1 c 0,-1.6687 1.331303,-3 3,-3 z"/>
+
+<path d="m -28,162 a 1,1 0 0 0 -1,1 1,1 0 0 0 1,1 h 4 a 1,1 0 0 0 1,-1 1,1 0 0 0 -1,-1 z"/>
+
+<path d="m -28,165 a 1,1 0 0 0 -1,1 1,1 0 0 0 1,1 h 8 a 1,1 0 0 0 1,-1 1,1 0 0 0 -1,-1 z"/>
+
+<path d="m -28,168 a 1,1 0 0 0 -1,1 1,1 0 0 0 1,1 h 8 a 1,1 0 0 0 1,-1 1,1 0 0 0 -1,-1 z"/>
+
+<path d="m -28,155 a 1.0001,1.0001 0 0 0 -1,1 v 4 a 1.0001,1.0001 0 0 0 1,1 h 4 a 1.0001,1.0001 0 0 0 1,-1 v -4 a 1.0001,1.0001 0 0 0 -1,-1 z m 1,2 h 2 v 2 h -2 z"/>
+
+</g></svg>
+              <span>Đơn hàng</span>
+              <i class="active-dot"></i>
+            </button>
+            <button class="nav-item" data-nav="profile">
+              <svg viewBox="0 0 20 20"><g transform="translate(-324,-1959)" fill="currentColor" stroke="none"><path d="M338.083123,1964.99998 C338.083123,1962.79398 336.251842,1960.99998 334,1960.99998 C331.748158,1960.99998 329.916877,1962.79398 329.916877,1964.99998 C329.916877,1967.20599 331.748158,1968.99999 334,1968.99999 C336.251842,1968.99999 338.083123,1967.20599 338.083123,1964.99998 M341.945758,1979 L340.124685,1979 C339.561214,1979 339.103904,1978.552 339.103904,1978 C339.103904,1977.448 339.561214,1977 340.124685,1977 L340.5626,1977 C341.26898,1977 341.790599,1976.303 341.523154,1975.662 C340.286989,1972.69799 337.383888,1970.99999 334,1970.99999 C330.616112,1970.99999 327.713011,1972.69799 326.476846,1975.662 C326.209401,1976.303 326.73102,1977 327.4374,1977 L327.875315,1977 C328.438786,1977 328.896096,1977.448 328.896096,1978 C328.896096,1978.552 328.438786,1979 327.875315,1979 L326.054242,1979 C324.778266,1979 323.773818,1977.857 324.044325,1976.636 C324.787453,1973.27699 327.107688,1970.79799 330.163906,1969.67299 C328.769519,1968.57399 327.875315,1966.88999 327.875315,1964.99998 C327.875315,1961.44898 331.023403,1958.61898 334.733941,1959.04198 C337.422678,1959.34798 339.650022,1961.44698 340.05323,1964.06998 C340.400296,1966.33099 339.456073,1968.39599 337.836094,1969.67299 C340.892312,1970.79799 343.212547,1973.27699 343.955675,1976.636 C344.226182,1977.857 343.221734,1979 341.945758,1979 M337.062342,1978 C337.062342,1978.552 336.605033,1979 336.041562,1979 L331.958438,1979 C331.394967,1979 330.937658,1978.552 330.937658,1978 C330.937658,1977.448 331.394967,1977 331.958438,1977 L336.041562,1977 C336.605033,1977 337.062342,1977.448 337.062342,1978"/></g></svg>
+              <span>Hồ sơ</span>
+              <i class="active-dot"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============ SEARCH SCREEN ============ -->
+    <section class="screen screen-overlay" data-screen="search">
+      <header class="subbar">
+        <button class="icon-btn" data-back aria-label="Quay lại"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <div class="search-input">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm thú cưng..." autocomplete="off" />
+        </div>
+      </header>
+      <div id="search-results" class="search-results"></div>
+    </section>
+
+    <!-- ============ FILTER SHEET ============ -->
+    <div class="sheet-backdrop" id="filter-sheet">
+      <div class="sheet">
+        <div class="sheet-head">
+          <h2>Bộ lọc</h2>
+          <button class="link" id="filter-reset">Đặt lại</button>
+        </div>
+        <div class="sheet-body">
+          <div class="filter-group">
+            <h3>Loại thú cưng</h3>
+            <div class="chip-row" data-filter="petType">
+              <button class="chip" data-val="">Tất cả</button>
+              <button class="chip" data-val="dog">Chó</button>
+              <button class="chip" data-val="cat">Mèo</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h3>Danh mục</h3>
+            <div class="chip-row" data-filter="category"></div>
+          </div>
+          <div class="filter-group">
+            <h3>Thương hiệu</h3>
+            <div class="chip-row" data-filter="brand"></div>
+          </div>
+          <div class="filter-group">
+            <h3>Khoảng giá</h3>
+            <div class="chip-row" data-filter="price">
+              <button class="chip" data-val="">Bất kỳ</button>
+              <button class="chip" data-val="0-100000">Dưới 100k</button>
+              <button class="chip" data-val="100000-300000">100k–300k</button>
+              <button class="chip" data-val="300000-1000000">300k–1M</button>
+              <button class="chip" data-val="1000000-">Trên 1M</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h3>Đánh giá</h3>
+            <div class="chip-row" data-filter="rating">
+              <button class="chip" data-val="">Bất kỳ</button>
+              <button class="chip" data-val="4">4★ trở lên</button>
+              <button class="chip" data-val="4.5">4.5★ trở lên</button>
+            </div>
+          </div>
+        </div>
+        <div class="sheet-foot">
+          <button class="btn btn-primary btn-block" id="filter-apply">Hiển thị kết quả</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SORT SHEET ============ -->
+    <div class="sheet-backdrop" id="sort-sheet">
+      <div class="sheet sheet-sm">
+        <div class="sheet-head"><h2>Sắp xếp theo</h2></div>
+        <div class="sheet-body">
+          <label class="option-row"><input type="radio" name="sort" value="popular" checked /><div><strong>Phổ biến</strong></div></label>
+          <label class="option-row"><input type="radio" name="sort" value="price-asc" /><div><strong>Giá: Thấp đến Cao</strong></div></label>
+          <label class="option-row"><input type="radio" name="sort" value="price-desc" /><div><strong>Giá: Cao đến Thấp</strong></div></label>
+          <label class="option-row"><input type="radio" name="sort" value="rating" /><div><strong>Đánh giá cao nhất</strong></div></label>
+        </div>
+        <div class="sheet-foot">
+          <button class="btn btn-primary btn-block" id="sort-apply">Áp dụng</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ARTICLE MODAL ============ -->
+    <div class="sheet-backdrop" id="article-modal">
+      <div class="sheet sheet-modal">
+        <div class="sheet-head"><h2 id="article-title"></h2><button class="icon-btn" id="article-close" aria-label="Đóng"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+        <div class="sheet-body" id="article-body"></div>
+      </div>
+    </div>
+
+    <!-- ============ TOAST ============ -->
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
